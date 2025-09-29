@@ -20,13 +20,10 @@ body {
 
 .chain-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping if many items */
     justify-content: center;
     gap: 15px; /* Space between cards in a chain */
     position: relative;
 }
-
-
 
 .employee-card {
     background-color: #fff;
@@ -37,7 +34,6 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    min-width: 180px;
 }
 
 .employee-card:hover {
@@ -86,7 +82,15 @@ body {
 
 
 
+#direct-reports {
+    flex-wrap: wrap;
+}
+
 #direct-reports .employee-card {
     background-color: #e9f5e9;
     border-color: #a3d8a3;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    min-width: 100px;
 }
